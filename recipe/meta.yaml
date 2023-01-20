@@ -1,5 +1,5 @@
 {% set name = "retina-face" %}
-{% set version = "0.0.12" %}
+{% set version = "0.0.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/retina-face-{{ version }}.tar.gz
-  sha256: 9cd335460390960671343e021b697d88b1623e9ffb0c398573d486a64e3054d2
+  sha256: 6710df84c645641f6f085ca4344f4844bcf8608df6e383dceb341c135b2f2553
 
 build:
   noarch: python
