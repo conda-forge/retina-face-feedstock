@@ -1,13 +1,13 @@
 {% set name = "retina-face" %}
-{% set version = "0.0.18" %}
+{% set version = "0.0.19" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c93204fbee031dc5b0b19a5c9c1f9807497eb55c4d4b0adf8c704a02c1568dd1
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 24dc048609562d7dd71b2180215e2e437f1e752514bf27b2cc3dd3af61cf3406
 
 build:
   noarch: python
@@ -19,6 +19,9 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
+    - onnxruntime >=1.13.0
+    - opencv-contrib-python-headless >=4.5.5.64
+    - requests >=2.27.1
     - gdown >=3.10.1
     - numpy >=1.14.0
     - opencv >=3.4.4
